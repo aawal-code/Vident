@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Navbar with Icons</title>
+  <title>Responsive Navbar with Icons</title>
 
   <!-- Ionicons for icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -16,16 +16,13 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode"> <!-- Default to dark mode -->
-
-  <!-- Logo in the top left -->
+<body class="dark-mode">
   <div class="logo">
-    <img src="your-logo.png" alt="Logo" class="logo-img">
+    <a href="index.html"><img src="imgs/logo.png" alt="Logo" class="logo-img"></a>
   </div>
 
-  <!-- Dark/Light Mode Toggle Button -->
   <button id="theme-toggle" class="theme-toggle">
-    <ion-icon name="moon-outline"></ion-icon> <!-- Default icon for Dark Mode -->
+    <ion-icon name="moon-outline"></ion-icon>
   </button>
 
   <div class="menu">
@@ -37,10 +34,8 @@
         </a>
       </li>
       <li class="link">
-        <a href="profile.html">
           <span class="link-icon"><ion-icon name="search-outline"></ion-icon></span>
           <span class="link-title">Search</span>
-        </a>
       </li>
       <li class="link">
         <a href="profile.html">
@@ -64,6 +59,5 @@
   </div>
 
   <script src="script.js"></script>
-
 </body>
 </html>

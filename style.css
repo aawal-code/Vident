@@ -3,9 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background: #19161c;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
@@ -15,51 +15,34 @@ body {
 /* Dark mode styles */
 body.dark-mode {
   background-color: #1f1f1f;
-  color: white;
+  color: #7F1F1F;
 }
 
 /* Light mode styles */
 body {
   background-color: #f8f8f8;
-  color: #333;
+  color: #7F1F1F;
 }
 
-/* Logo in top-left */
-.logo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.logo-img {
-  height: 40px; /* Set a size for the logo */
-  transition: filter 0.5s ease; /* Smooth transition for inversion */
-}
-
-/* Invert logo when dark mode is active */
-body.dark-mode .logo-img {
-  filter: invert(1); /* Inverts the logo color in dark mode */
-}
-
-/* Styling for the menu bar */
+/* Menu container */
 .menu {
-  width: calc(130px + 4 * 70px + 4rem);
-  height: 80px;
+  width: 90%; /* Responsive width */
+  max-width: 600px;
+  height: 70px;
   background: #fff;
   border-radius: 40px 10px 40px;
   display: flex;
   align-items: center;
-  padding: 0 30px;
-  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.075);
+  padding: 0 5%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.075);
   position: fixed;
-  bottom: 17%;
-  top: 88%;
+  bottom: 5%; /* More dynamic position */
   transition: background-color 0.5s ease;
 }
 
 /* Light mode navbar */
 body:not(.dark-mode) .menu {
-  background: #1f1f1f;
+  background: #3f3f3f;
 }
 
 /* Dark mode navbar */
@@ -72,10 +55,11 @@ body.dark-mode .menu {
   width: 100%;
   list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 5%;
   align-items: center;
   justify-content: space-evenly;
   padding: 0;
+  margin:  0;
 }
 
 /* Styling for each link item */
@@ -83,7 +67,8 @@ body.dark-mode .menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
+  width: 20%; /* Responsive width for smaller screens */
+  max-width: 80px;
   height: 50px;
   border-radius: 99em;
   position: relative;
@@ -107,7 +92,7 @@ body.dark-mode .menu {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #2d2d2d;
   border-radius: 99em;
   transform: translateX(100%);
   transition: transform 0.2s ease-in;
@@ -118,14 +103,14 @@ body.dark-mode .menu {
 .link-icon {
   font-size: 20px;
   position: absolute;
-  left: 18px;
+  left: 10%;
 }
 
 .link-title {
   transform: translateX(100%);
   transition: transform 0.2s ease-in;
-  text-indent: 28px;
-  font-size: 14px;
+  text-indent: 1em;
+  font-size: 0.9rem;
   opacity: 0;
   white-space: nowrap;
 }
@@ -133,7 +118,7 @@ body.dark-mode .menu {
 .link:hover,
 .link:focus {
   outline: 0;
-  width: 130px;
+  width: 120px;
 }
 
 .link:hover:before,
@@ -146,7 +131,7 @@ body.dark-mode .menu {
 
 /* Dark mode link text */
 body.dark-mode .link-title {
-  color: #fff;
+  color: #7F1F1F;
 }
 
 /* Dark/light mode button */
@@ -156,8 +141,8 @@ body.dark-mode .link-title {
   right: 10px;
   background: none;
   border: none;
-  color: #fff;
-  font-size: 24px;
+  color: #7F1F1F;
+  font-size: 32px; /* Increased size for visibility */
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
   z-index: 10;
@@ -165,16 +150,48 @@ body.dark-mode .link-title {
 
 /* Dark mode button color */
 body.dark-mode .theme-toggle {
-  color: #ffd52d;
+  color: #7F1F1F;
   transform: rotate(180deg);
 }
 
-/* Transition for the icon change */
-.theme-toggle ion-icon {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+/* Logo in top-left with increased size */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
-/* Dark mode icon effect */
-body.dark-mode .theme-toggle ion-icon {
-  transform: rotate(180deg);
+.logo-img {
+  height: 50px; /* Increased size for visibility */
+  transition: filter 0.5s ease;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .link {
+    width: 50px;
+  }
+
+  .menu {
+    height: 60px;
+    padding: 0 4%;
+  }
+
+  .theme-toggle {
+    font-size: 28px; /* Slightly smaller for small screens */
+  }
+
+  .link-title {
+    display: none; /* Hide titles on small screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    max-width: 800px;
+  }
+
+  .link-title {
+    font-size: 1rem;
+  }
 }
