@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Navbar with Icons</title>
+
+  <!-- Ionicons for icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Google Fonts for styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dark/Light Mode Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle">
+    <ion-icon name="moon-outline"></ion-icon> <!-- Default icon for Dark Mode -->
+  </button>
+
+  <div class="menu">
+    <ul>
+      <li class="link">
+        <a href="index.html">
+          <span class="link-icon"><ion-icon name="home-outline"></ion-icon></span>
+          <span class="link-title">Home</span>
+        </a>
+      </li>
+      <li class="link">
+        <a href="profile.html">
+          <span class="link-icon"><ion-icon name="search-outline"></ion-icon></span>
+          <span class="link-title">Search</span>
+        </a>
+      </li>
+      <li class="link">
+        <a href="profile.html">
+          <span class="link-icon"><ion-icon name="person-outline"></ion-icon></span>
+          <span class="link-title">Profile</span>
+        </a>
+      </li>
+      <li class="link">
+        <a href="cart.html">
+          <span class="link-icon"><ion-icon name="bag-handle-outline"></ion-icon></span>
+          <span class="link-title">Cart</span>
+        </a>
+      </li>
+      <li class="link">
+        <a href="support.html">
+          <span class="link-icon"><ion-icon name="call-outline"></ion-icon></span>
+          <span class="link-title">Support</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
