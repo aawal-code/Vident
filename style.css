@@ -42,7 +42,7 @@ body {
 
 /* Light mode navbar */
 body:not(.dark-mode) .menu {
-  background: #3f3f3f;
+  background: #D6D5C9;
 }
 
 /* Dark mode navbar */
@@ -92,7 +92,7 @@ body.dark-mode .menu {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: #2d2d2d;
+  background-color: #B9BAA3;
   border-radius: 99em;
   transform: translateX(100%);
   transition: transform 0.2s ease-in;
@@ -101,7 +101,7 @@ body.dark-mode .menu {
 
 /* Icon and text transition */
 .link-icon {
-  font-size: 20px;
+  font-size: 25px;
   position: absolute;
   left: 10%;
 }
@@ -109,8 +109,8 @@ body.dark-mode .menu {
 .link-title {
   transform: translateX(100%);
   transition: transform 0.2s ease-in;
-  text-indent: 1em;
-  font-size: 0.9rem;
+  text-indent: 2em;
+  font-size: 1rem;
   opacity: 0;
   white-space: nowrap;
 }
@@ -118,7 +118,7 @@ body.dark-mode .menu {
 .link:hover,
 .link:focus {
   outline: 0;
-  width: 120px;
+  width: 900%;
 }
 
 .link:hover:before,
